@@ -1,0 +1,23 @@
+# CodeVita Philaland coins distribution.
+
+list1 = []
+list2 = []
+
+def binary(q):
+    list3 = []
+    while q !=0 :
+        list3.append(q % 2)
+        q = q // 2
+    return len(list3)       # Express the given number in the form of binary and sum of 0's and 1's will give you the answer. 
+    
+
+T = int(input("Enter the number of test cases:"))
+
+for i in range(0, T):
+    list1.append(int(input("Enter the maximum value for test case %d:"%(i+1))))
+    
+for i in range(0, len(list1)):
+    list2.append(binary(list1[i]))
+    
+for i in range(0, len(list2)):
+    print(list2[i])
